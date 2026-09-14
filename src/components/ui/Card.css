@@ -1,0 +1,97 @@
+.card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition:
+    box-shadow var(--dur-slow) var(--ease-out-expo),
+    border-color var(--dur-slow) var(--ease-out-expo),
+    transform var(--dur-slow) var(--ease-out-expo);
+}
+
+.card--clickable {
+  cursor: pointer;
+}
+
+/* ── Default variant ──────────────────────────────────────── */
+.card--default {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+.card--default:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+/* ── Glass variant ────────────────────────────────────────── */
+.card--glass {
+  background: rgba(10, 10, 14, 0.60);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+.card--glass:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+/* ── Gradient variant ─────────────────────────────────────── */
+.card--gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(94, 106, 210, 0.10) 0%,
+    rgba(255, 255, 255, 0.03) 60%,
+    rgba(94, 106, 210, 0.04) 100%
+  );
+  border: 1px solid var(--border-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.card--gradient:hover {
+  border-color: rgba(94, 106, 210, 0.50);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+/* ── Spotlight ────────────────────────────────────────────── */
+.card__spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity var(--dur-normal) var(--ease-out);
+  border-radius: inherit;
+}
+
+/* ── Top glow line ────────────────────────────────────────── */
+.card__top-glow {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Content ──────────────────────────────────────────────── */
+.card__content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}

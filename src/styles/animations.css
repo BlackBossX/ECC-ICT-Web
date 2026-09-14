@@ -1,0 +1,98 @@
+/* ============================================================
+   Keyframe Animations — ICT Society Design System
+   ============================================================ */
+
+/* ── Blob float (ambient background lighting) ─────────────── */
+@keyframes blob-float-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  33%       { transform: translateY(-24px) rotate(0.5deg) scale(1.02); }
+  66%       { transform: translateY(-12px) rotate(-0.5deg) scale(0.98); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  40%       { transform: translateY(-18px) translateX(12px) rotate(1deg); }
+  70%       { transform: translateY(-6px) translateX(-8px) rotate(-0.5deg); }
+}
+
+@keyframes blob-float-3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(-1deg); }
+}
+
+@keyframes blob-pulse {
+  0%, 100% { opacity: 0.08; transform: scale(1); }
+  50%       { opacity: 0.14; transform: scale(1.05); }
+}
+
+/* ── Shimmer for gradient text ────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* ── Fade-up entrance ─────────────────────────────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Scale-in entrance ────────────────────────────────────── */
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Slide-down for mobile menu ───────────────────────────── */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Counter tick animation ───────────────────────────────── */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Spin (for loading states) ────────────────────────────── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Gradient border flow ─────────────────────────────────── */
+@keyframes border-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+/* ── Scroll indicator bounce ──────────────────────────────── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(6px); opacity: 0.5; }
+}
+
+/* ── Blink cursor ─────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
