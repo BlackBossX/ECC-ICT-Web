@@ -62,7 +62,7 @@ export function PageLoader({ onComplete }: PageLoaderProps) {
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="page-loader__name">ICT Society</span>
-            <span className="page-loader__tagline">University Technology Community</span>
+            <span className="page-loader__tagline">Eheliyagoda National College</span>
           </motion.div>
 
           {/* Progress bar */}

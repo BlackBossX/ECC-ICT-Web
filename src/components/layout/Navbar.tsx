@@ -43,7 +43,7 @@ export function Navbar() {
         {/* ── Logo image only ──────────────────────────────── */}
         <Link to="/" className="navbar__logo" aria-label="ICT Society home" onClick={() => setMenuOpen(false)}>
           <img
-            src="/ICTnew.png"
+            src="/newlong.png"
             alt="ICT Society"
             className="navbar__logo-img"
             width="40"
