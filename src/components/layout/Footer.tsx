@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Zap, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { GithubIcon, TwitterIcon, LinkedinIcon, InstagramIcon } from '../ui/SocialIcons';
 import './Footer.css';
 
@@ -37,10 +37,14 @@ export function Footer() {
           {/* Brand */}
           <div className="footer__brand">
             <Link to="/" className="footer__logo" aria-label="ICT Society home">
-              <div className="footer__logo-mark" aria-hidden="true">
-                <Zap size={18} />
-              </div>
-              <span>ICT<span className="footer__logo-accent">Society</span></span>
+              <img
+                src="/ICTnew.png"
+                alt="ICT Society"
+                className="footer__logo-img"
+                width="36"
+                height="36"
+              />
+              <span className="footer__logo-name">ICT<span className="footer__logo-accent">Society</span></span>
             </Link>
             <p className="footer__tagline">
               Connecting the next generation of technology leaders at university.

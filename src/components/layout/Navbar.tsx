@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/Button';
 import './Navbar.css';
 
@@ -14,8 +14,8 @@ const NAV_LINKS = [
 ];
 
 export function Navbar() {
-  const [scrolled, setScrolled]   = useState(false);
-  const [menuOpen, setMenuOpen]   = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -23,7 +23,6 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close menu on resize to desktop
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 768) setMenuOpen(false);
@@ -32,7 +31,6 @@ export function Navbar() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  // Lock body scroll when menu open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -42,17 +40,18 @@ export function Navbar() {
     <header className={['navbar', scrolled ? 'navbar--scrolled' : ''].filter(Boolean).join(' ')}>
       <nav className="navbar__inner container" role="navigation" aria-label="Main navigation">
 
-        {/* ── Logo ────────────────────────────────────────── */}
+        {/* ── Logo image only ──────────────────────────────── */}
         <Link to="/" className="navbar__logo" aria-label="ICT Society home" onClick={() => setMenuOpen(false)}>
-          <div className="navbar__logo-mark" aria-hidden="true">
-            <Zap size={18} />
-          </div>
-          <span className="navbar__logo-text">
-            ICT<span className="navbar__logo-accent">Society</span>
-          </span>
+          <img
+            src="/ICTnew.png"
+            alt="ICT Society"
+            className="navbar__logo-img"
+            width="40"
+            height="40"
+          />
         </Link>
 
-        {/* ── Desktop links ────────────────────────────────── */}
+        {/* ── Desktop links ─────────────────────────────────── */}
         <ul className="navbar__links" role="list">
           {NAV_LINKS.map(({ to, label }) => (
             <li key={to}>
@@ -68,7 +67,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* ── Desktop CTA ──────────────────────────────────── */}
+        {/* ── Desktop CTA ───────────────────────────────────── */}
         <div className="navbar__cta">
           <Link to="/admin">
             <Button variant="ghost" size="sm">Sign In</Button>
@@ -78,7 +77,7 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* ── Mobile hamburger ─────────────────────────────── */}
+        {/* ── Mobile hamburger ──────────────────────────────── */}
         <button
           className="navbar__hamburger focus-ring"
           onClick={() => setMenuOpen(o => !o)}
@@ -90,9 +89,14 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* ── Mobile dropdown ──────────────────────────────────── */}
+      {/* ── Mobile dropdown ───────────────────────────────────── */}
       {menuOpen && (
         <div id="mobile-menu" className="navbar__mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+          {/* Logo in mobile menu header */}
+          <div className="navbar__mobile-logo">
+            <img src="/ICTnew.png" alt="ICT Society" width="36" height="36" className="navbar__logo-img" />
+            <span className="navbar__mobile-society-name">ICT Society</span>
+          </div>
           <ul role="list">
             {NAV_LINKS.map(({ to, label }) => (
               <li key={to}>

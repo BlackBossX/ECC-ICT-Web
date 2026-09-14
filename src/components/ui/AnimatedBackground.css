@@ -42,7 +42,7 @@
   will-change: transform;
 }
 
-/* Primary blob — top center, indigo */
+/* Primary blob — top center, cyan */
 .animated-bg__blob--primary {
   width: 900px;
   height: 600px;
@@ -51,8 +51,8 @@
   transform: translateX(-50%);
   background: radial-gradient(
     ellipse at center,
-    rgba(94, 106, 210, 0.25) 0%,
-    rgba(94, 106, 210, 0.08) 50%,
+    rgba(4, 207, 249, 0.20) 0%,
+    rgba(4, 207, 249, 0.06) 50%,
     transparent 100%
   );
   animation: blob-float-1 10s ease-in-out infinite;
@@ -73,7 +73,7 @@
   animation: blob-float-2 12s ease-in-out infinite;
 }
 
-/* Tertiary blob — right side, indigo/blue */
+/* Tertiary blob — right side, cyan/teal */
 .animated-bg__blob--tertiary {
   width: 500px;
   height: 600px;
@@ -81,8 +81,8 @@
   right: -100px;
   background: radial-gradient(
     ellipse at center,
-    rgba(60, 80, 200, 0.12) 0%,
-    rgba(94, 106, 210, 0.05) 60%,
+    rgba(4, 207, 249, 0.10) 0%,
+    rgba(4, 207, 249, 0.04) 60%,
     transparent 100%
   );
   animation: blob-float-3 9s ease-in-out infinite;
@@ -97,7 +97,7 @@
   transform: translateX(-50%);
   background: radial-gradient(
     ellipse at center,
-    rgba(94, 106, 210, 0.10) 0%,
+    rgba(4, 207, 249, 0.08) 0%,
     transparent 70%
   );
   animation: blob-pulse 8s ease-in-out infinite;
@@ -109,7 +109,7 @@
   inset: 0;
   background: radial-gradient(
     600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(94, 106, 210, 0.06) 0%,
+    rgba(4, 207, 249, 0.05) 0%,
     transparent 70%
   );
   transition: background 0.1s ease;

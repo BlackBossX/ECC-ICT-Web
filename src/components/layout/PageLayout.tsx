@@ -21,7 +21,7 @@ export function PageLayout({ children }: PageLayoutProps) {
     <div className="page-layout">
       <AnimatedBackground />
       <Navbar />
-      <main id="main-content" className="page-layout__main" tabIndex={-1}>
+      <main id="main-content" className="page-layout__main">
         {children}
       </main>
       <Footer />
