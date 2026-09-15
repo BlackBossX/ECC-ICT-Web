@@ -3,26 +3,6 @@
    Reusable primitives built on top of tokens
    ============================================================ */
 
-/* ── Skip link (accessibility) ────────────────────────────── */
-.skip-link {
-  position: fixed;
-  top: var(--space-4);
-  left: var(--space-4);
-  z-index: var(--z-toast);
-  background: var(--accent);
-  color: white;
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-md);
-  font-size: var(--text-sm);
-  font-weight: var(--fw-medium);
-  text-decoration: none;
-  transform: translateY(-120%);
-  transition: transform var(--dur-fast) var(--ease-out);
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-}
 
 /* ── Gradient text ────────────────────────────────────────── */
 .text-gradient-white {
@@ -42,7 +22,7 @@
   background: linear-gradient(
     90deg,
     var(--accent) 0%,
-    #818cf8 40%,
+    #29d8fb 40%,
     var(--accent) 100%
   );
   background-size: 200% auto;
@@ -126,7 +106,7 @@
   outline: none;
   box-shadow:
     0 0 0 2px var(--bg-base),
-    0 0 0 4px rgba(94, 106, 210, 0.50);
+    0 0 0 4px rgba(4, 207, 249, 0.50);
   border-radius: inherit;
 }
 
